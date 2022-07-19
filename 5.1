@@ -1,0 +1,128 @@
+ // Rotary Encoder Inputs
+ #define inputCLK D1
+ #define inputDT D2
+ #define inputSW D3
+ 
+ // LED Outputs for test
+ #define ledSW D8
+ #define led2 D7
+
+
+ int counter = 0; 
+ int currentStateCLK;
+ int previousStateCLK; 
+
+ int ch = 1; // 1 = center 2 = front 3 = back 4 = sub 
+
+ 
+ 
+ 
+
+
+
+ void setup() { 
+   
+   // Set encoder pins as inputs  
+   pinMode (inputCLK,INPUT);
+   pinMode (inputDT,INPUT);
+   pinMode (inputSW,INPUT);
+
+
+   // Set LED pins as outputs
+   pinMode (ledSW,OUTPUT);  
+   pinMode (led2,OUTPUT);
+
+   // Setup Serial Monitor
+   Serial.begin (9600);
+   
+   // Read the initial state of inputCLK
+   // Assign to previousStateCLK variable
+   previousStateCLK = digitalRead(inputCLK);
+   ch = 1;
+
+
+ 
+ } 
+ 
+//--------------------------------------------------------------------------------------------------------------------
+ void loop() { 
+  // Read the current state of inputCLK
+   currentStateCLK = digitalRead(inputCLK);
+
+//---------------------------------------------------------------------------------------------
+         // SW selector
+    if (digitalRead(inputSW) == 0){
+     ch ++;
+     if (ch > 4){
+      ch = 1;
+     }
+      if (ch == 1){
+        led(0,0);
+      }
+      if (ch == 2){
+        led(1,0);
+      }
+      if (ch == 3){
+        led(1,1);
+      }
+      if (ch == 4){
+        led(0,1);
+      }
+     Serial.println(ch);
+     delay(300);
+   } 
+
+ //-------------------------rotate---------------------------------------------------  
+if (currentStateCLK != previousStateCLK && ch == 1){ 
+    rotation("CENTER");
+   }
+if (currentStateCLK != previousStateCLK && ch == 2){ 
+    rotation("FRONT");
+   }
+if (currentStateCLK != previousStateCLK && ch == 3){ 
+    rotation("BACK");
+   }
+if (currentStateCLK != previousStateCLK && ch == 4){ 
+    rotation("SUB");
+   }
+
+
+
+// set 0 rotation for compare
+   previousStateCLK = currentStateCLK; 
+
+ }
+
+
+
+
+
+
+
+ //---------------function----------LED 4 bit----------------------------------------------------------
+ void led (bool l1,bool l2){
+  digitalWrite(ledSW, l1);
+  digitalWrite(led2, l2);
+
+ }
+
+ 
+ //--------------functon---------------rotate-----------------------------------------------------------
+ void rotation (String n){
+     if (digitalRead(inputDT) != currentStateCLK) {     
+       counter ++;
+       Serial.print(n);
+       Serial.print(">>  ");
+       Serial.println(counter);
+
+  
+     } else {
+       counter --;
+       Serial.print(n);
+       Serial.print("<<  ");
+       Serial.println(counter);
+
+     }
+
+
+ }
