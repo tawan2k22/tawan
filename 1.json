@@ -10,6 +10,9 @@
   ],
   "diffusion_models": [
 
+    "https://huggingface.co/Bingsu/adetailer/resolve/main/face_yolov9c.pt",
+    "https://huggingface.co/datasets/Gourieff/ReActor/resolve/main/models/sams/sam_vit_b_01ec64.pth"
+
 
 
   ],
@@ -26,11 +29,14 @@
     "https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth"
   ],
   "controlnet": [
+    "https://huggingface.co/xingren23/comfyflow-models/resolve/8297c11e55592e513093be0a4085dd666d3789e4/controlnet/instantid-controlnet.safetensors",
+    "https://huggingface.co/stabilityai/control-lora/resolve/main/control-LoRAs-rank256/control-lora-depth-rank256.safetensors"
   ],
   "clip_vision": [
     "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors"
   ],
   "ipadapter": [
+    "https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin"
   ],
   "style_models": [
   ],
