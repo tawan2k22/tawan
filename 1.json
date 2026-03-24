@@ -9,21 +9,22 @@
   "unet": [
   ],
   "diffusion_models": [
-
-    "https://huggingface.co/Bingsu/adetailer/resolve/main/face_yolov9c.pt",
-    "https://huggingface.co/datasets/Gourieff/ReActor/resolve/main/models/sams/sam_vit_b_01ec64.pth"
+    "https://huggingface.co/FX-FeiHou/wan2.2-Remix/resolve/main/NSFW/Wan2.2_Remix_NSFW_i2v_14b_high_lighting_fp16_v2.1.safetensors",
+    "https://huggingface.co/FX-FeiHou/wan2.2-Remix/resolve/main/NSFW/Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp16_v2.1.safetensors"
 
 
 
   ],
   "text_encoders": [
-    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+    "https://huggingface.co/zootkitty/nsfw_wan_umt5-xxl_bf16_fixed/resolve/main/nsfw_wan_umt5-xxl_bf16_fixed.safetensors",
     "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors"
   ],
   "loras": [
     "https://huggingface.co/lkzd7/WAN2.2_LoraSet_NSFW/resolve/main/iGoon%2520-%2520Blink_Back_Doggystyle_LOW.safetensors",
     "https://huggingface.co/lkzd7/WAN2.2_LoraSet_NSFW/resolve/main/iGoon%20-%20Blink_Front_Doggystyle_I2V_LOW.safetensors",
-    "https://huggingface.co/lkzd7/WAN2.2_LoraSet_NSFW/resolve/main/Blink_Squatting_Cowgirl_Position_I2V_HIGH.safetensors"
+    "https://huggingface.co/lkzd7/WAN2.2_LoraSet_NSFW/resolve/main/Blink_Squatting_Cowgirl_Position_I2V_HIGH.safetensors",
+    "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+    "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors"
   ],
   "upscale_models": [
     "https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth"
