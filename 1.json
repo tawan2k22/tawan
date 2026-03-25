@@ -35,10 +35,15 @@
     "https://huggingface.co/stabilityai/control-lora/resolve/main/control-LoRAs-rank256/control-lora-depth-rank256.safetensors"
   ],
   "clip_vision": [
-    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors"
+    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors",
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
   ],
   "ipadapter": [
-    "https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin"
+    "https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin",
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.safetensors",
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus_sd15.safetensors",
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-face_sd15.safetensors",
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sd15.bin"
   ],
   "style_models": [
   ],
